@@ -1,18 +1,18 @@
 import Notiflix from 'notiflix';
 
-const delay 
 
-function createPromise(position, delay) {
-  const position = document.getElementsByName('amount');
-  const shouldResolve = Math.random() > 0.3;
-  setTimeout(() => {
-    if (shouldResolve) {
-      // Fulfill
-    } else {
-      // Reject
-    }
-  }, position);
-}
+
+// function createPromise(position, delay) {
+//   const position = document.getElementsByName('amount');
+//   const shouldResolve = Math.random() > 0.3;
+//   setTimeout(() => {
+//     if (shouldResolve) {
+//       // Fulfill
+//     } else {
+//       // Reject
+//     }
+//   }, position);
+// }
 
 
 createPromise(2, 1500)
