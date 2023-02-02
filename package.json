@@ -4,7 +4,6 @@
   "description": "",
   "homepage": "https://itsjenm.github.io/goit-js-hw-09/",
   "scripts": {
-    "deploy": "gh-pages -d build",
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-09/"
   },
