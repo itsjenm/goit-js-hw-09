@@ -20,27 +20,27 @@ form.addEventListener("submit", submittedPromises)
      
       let firstDelay = parseInt(delay.value);
       const incrementDelay = parseInt(increment.value);
-      const amountOfPromise = parseInt(amount.value);
+      const totalPromises = parseInt(amount.value);
   
 
-      console.log(firstDelay)
-      console.log(incrementDelay)
-      console.log(amountOfPromise)
+      // console.log(firstDelay)
+      // console.log(incrementDelay)
+      // console.log(amountOfPromise)
 
       let position; //sequence number of promise
     
       
-      for (position = 1; position <= amountOfPromise; position++) {
+      for (position = 1; position <= totalPromises; position++) {
         createPromise(position, firstDelay)
           .then(({ position, delay }) => {
             Notiflix.Notify.success(
               `✅ Fulfilled promise ${position} in ${delay}ms`
             );
-            console.log(`✅ Fulfilled promise ${position} in ${delay}ms`)
+            // console.log(`✅ Fulfilled promise ${position} in ${delay}ms`)
           })
           .catch(({ position, delay }) => {
             Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`)
-            console.log(`❌ Rejected promise ${position} in ${delay}ms`)
+            // console.log(`❌ Rejected promise ${position} in ${delay}ms`)
           });
     
           firstDelay += incrementDelay
