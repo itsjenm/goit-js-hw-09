@@ -23,7 +23,6 @@ flatpickr(input, {
       Notiflix.Notify.failure('Please choose a date in the future');
       start.disabled = true;
     } else {
-      Notiflix.Notify.success();
       start.disabled = false;
     }
   },
@@ -31,11 +30,12 @@ flatpickr(input, {
 
 // Start counter after clicking start
 start.addEventListener('click', () => {
+  Notiflix.Notify.success();
+  input.disabled = true;
+  start.disabled = true;
   const selectedDate = input.value;
   const countdown = setInterval(() => {
-    if ((start.disabled = false)) {
-      return;
-    }
+  
     let now = Date.now();
     let end = new Date(selectedDate).getTime();
     let difference = end - now;
